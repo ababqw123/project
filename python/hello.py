@@ -141,15 +141,33 @@
 # student = [len(i) for i in student]
 # print(student)
 
-from random import *
+# from random import *
 
-b = 0
-for i in range(1,51) :
-    cos_time = randint(5,50)
-    if 5 <= cos_time <= 15 :
-       a = "O"
-       b += 1
+# b = 0
+# for i in range(1,51) :
+#     cos_time = randint(5,50)
+#     if 5 <= cos_time <= 15 :
+#        a = "O"
+#        b += 1
+#     else :
+#        a = " "
+#     print("[{}] {}번째 손님 (소요시간 : {}분)" .format(a,i,cos_time))
+# print("총 탑승 승객 : {} 분" .format(b))
+
+def open_account() :
+    print("새로운 계좌가 생성되었습니다.")
+
+def deposit(balance, money) :
+    print("입금이 완료되었습니다. 잔액은 {} 원입니다." .format(balance + money))
+    return balance + money
+
+def withdraw(balance, money) :
+    if balance < money :
+        print("잔액이 부족합니다. 잔액은 {} 원입니다." .format(balance))
     else :
-       a = " "
-    print("[{}] {}번째 손님 (소요시간 : {}분)" .format(a,i,cos_time))
-print("총 탑승 승객 : {} 분" .format(b))
+        ("출금이 완료되었습니다. 잔액은 {} 원입니다." .format(balance - money))
+        return balance - money
+
+balance = 3000
+balance = withdraw(balance, 1000)
+print(balance)
