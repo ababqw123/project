@@ -136,4 +136,20 @@
 #     index -= 1
 #     if index == 0 :
 #         print("커피는 폐기처분 되었습니다.")
-    
+
+# student = ["iron man", "thor", "greet"]
+# student = [len(i) for i in student]
+# print(student)
+
+from random import *
+
+b = 0
+for i in range(1,51) :
+    cos_time = randint(5,50)
+    if 5 <= cos_time <= 15 :
+       a = "O"
+       b += 1
+    else :
+       a = " "
+    print("[{}] {}번째 손님 (소요시간 : {}분)" .format(a,i,cos_time))
+print("총 탑승 승객 : {} 분" .format(b))
